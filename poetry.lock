@@ -30,6 +30,17 @@ python-versions = ">=3.6"
 frozenlist = ">=1.1.0"
 
 [[package]]
+name = "art"
+version = "5.7"
+description = "ASCII Art Library For Python"
+category = "main"
+optional = false
+python-versions = ">=2.7"
+
+[package.extras]
+dev = ["coverage (>=4.1)", "codecov (>=2.0.15)", "vulture (>=1.0)", "bandit (>=1.5.1)", "pydocstyle (>=3.0.0)"]
+
+[[package]]
 name = "async-timeout"
 version = "4.0.2"
 description = "Timeout context manager for asyncio programs"
@@ -82,6 +93,17 @@ python-versions = ">=3.7"
 colorama = {version = "*", markers = "platform_system == \"Windows\""}
 
 [[package]]
+name = "color"
+version = "0.1"
+description = "python module for colorize string"
+category = "main"
+optional = false
+python-versions = "*"
+
+[package.dependencies]
+enum34 = "*"
+
+[[package]]
 name = "colorama"
 version = "0.4.5"
 description = "Cross-platform colored terminal text."
@@ -96,6 +118,14 @@ description = "An implementation of the Debug Adapter Protocol for Python"
 category = "dev"
 optional = false
 python-versions = ">=3.7"
+
+[[package]]
+name = "enum34"
+version = "1.1.10"
+description = "Python 3.4 Enum backported to 3.3, 3.2, 3.1, 2.7, 2.6, 2.5, and 2.4"
+category = "main"
+optional = false
+python-versions = "*"
 
 [[package]]
 name = "flask"
@@ -202,6 +232,14 @@ optional = false
 python-versions = ">=3.7"
 
 [[package]]
+name = "noise"
+version = "1.2.2"
+description = "Perlin noise for Python"
+category = "main"
+optional = false
+python-versions = "*"
+
+[[package]]
 name = "numpy"
 version = "1.23.2"
 description = "NumPy is the fundamental package for array computing with Python."
@@ -233,6 +271,18 @@ qa = ["flake8 (==3.8.3)", "mypy (==0.782)"]
 testing = ["docopt", "pytest (<6.0.0)"]
 
 [[package]]
+name = "pillow"
+version = "9.2.0"
+description = "Python Imaging Library (Fork)"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[package.extras]
+docs = ["furo", "olefile", "sphinx (>=2.4)", "sphinx-copybutton", "sphinx-issues (>=3.0.1)", "sphinx-removed-in", "sphinxext-opengraph"]
+tests = ["check-manifest", "coverage", "defusedxml", "markdown2", "olefile", "packaging", "pyroma", "pytest", "pytest-cov", "pytest-timeout"]
+
+[[package]]
 name = "pluggy"
 version = "1.0.0"
 description = "plugin and hook calling mechanisms for python"
@@ -262,6 +312,26 @@ python-versions = ">=3.6.8"
 
 [package.extras]
 diagrams = ["railroad-diagrams", "jinja2"]
+
+[[package]]
+name = "pytelegrambotapi"
+version = "4.7.0"
+description = "Python Telegram bot api."
+category = "main"
+optional = false
+python-versions = "*"
+
+[package.dependencies]
+requests = "*"
+
+[package.extras]
+PIL = ["pillow"]
+aiohttp = ["aiohttp"]
+aioredis = ["aioredis"]
+fastapi = ["fastapi"]
+json = ["ujson"]
+redis = ["redis (>=3.4.1)"]
+uvicorn = ["uvicorn"]
 
 [[package]]
 name = "python-lsp-jsonrpc"
@@ -477,18 +547,21 @@ testing = ["pytest (>=6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytest-
 [metadata]
 lock-version = "1.1"
 python-versions = ">=3.8.0,<3.9"
-content-hash = "4ceda468c6ce7d0b641f0c244f742d3a912100cd87f29fbe250fdc0a2528f740"
+content-hash = "bbd9be7ac1f333043dd27d3f5a00d23c1fc4c5a30652d868374c4d13bc51046b"
 
 [metadata.files]
 aiohttp = []
 aiosignal = []
+art = []
 async-timeout = []
 attrs = []
 certifi = []
 charset-normalizer = []
 click = []
+color = []
 colorama = []
 debugpy = []
+enum34 = []
 flask = []
 frozenlist = []
 idna = []
@@ -498,12 +571,15 @@ jedi = []
 jinja2 = []
 markupsafe = []
 multidict = []
+noise = []
 numpy = []
 packaging = []
 parso = []
+pillow = []
 pluggy = []
 pyflakes = []
 pyparsing = []
+pytelegrambotapi = []
 python-lsp-jsonrpc = []
 python-lsp-server = []
 pytoolconfig = []
